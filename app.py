@@ -34,7 +34,7 @@ if st.button("Analyze"):
 
         # Get the predicted sentiment (0 = Negative, 1 = Positive)
         prediction = torch.argmax(logits, dim=-1).item()
-        sentiment = "Positive" if prediction == 1 else "Negative"
+        sentiment = "Recommended" if prediction == 1 else "Not Recommended"
 
         # Display the prediction
         st.write(f"Predicted Sentiment: **{sentiment}**")
